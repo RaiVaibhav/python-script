@@ -1,4 +1,4 @@
-# Insert a Title for the script  // TODO
+# Travel time calculator
 
 Hello! Command-line lover, who wants to use the web browser to know how long it will take between two locations when you have this great command-line script to do that? Nobody, right?
 Congratulations, you will no longer need to leave your beloved terminal for this.
