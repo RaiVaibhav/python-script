@@ -3,7 +3,6 @@
 
 import datetime
 from datetime import datetime
-import getpass
 from getpass import getpass
 import googlemaps
 from googlemaps import Client
