@@ -40,21 +40,27 @@ def travel_time(frm,to,mode):
 
 
 def main():
-    frm = input("Origin : ").lower();
-    if len(frm)<1:
-        exit_point()
-    to = input("Destination : ").lower();
-    if len(to)<1:
-        exit_point()
-    mode = input("Mode(Driving,Train,Walking,Bicycle) : ").lower();
-    while mode not in ["driving","train","walking","bicycle"]:
-        if len(mode)<1:
+    try:
+        frm = input("Origin : ").lower();
+        if len(frm)<1:
             exit_point()
-        print("Choose from given options only")
-        mode = input("Mode(Driving,Train,Walking,Bicycle) : ").lower();
-    netTime = travel_time(frm,to,mode)
-    print("\nIt will take %s to travel from %s to %s." %(netTime, frm, to))
-    exit_point()
+        to = input("Destination : ").lower();
+        if len(to)<1:
+            exit_point()
+        mode = input("Mode(Driving,Train,Walking) : ").lower();
+        while mode not in ["driving","train","walking"]:
+            if len(mode)<1:
+                exit_point()
+            print("Choose from given options only")
+            mode = input("Mode(Driving,Train,Walking) : ").lower();
+        if mode=='train':
+            mode='transit'
+        netTime = travel_time(frm,to,mode)
+        print("\nIt will take %s to travel from %s to %s." %(netTime, frm, to))
+        exit_point()
+    except:
+        print("Error: Invalid keystroke")
+        exit_point()
 
 if __name__ =='__main__':
     main()
