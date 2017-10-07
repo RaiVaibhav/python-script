@@ -5,3 +5,4 @@
 - [Himanshi](https://github.com/Himanshi-Khandelwal)
 - [pBouillon](https://github.com/pBouillon)
 - [Random Hacktoberfest Participant](https://github.com/random-hacktoberfest-participant-2017)*
+- [Nishant Agrawal](https://github.com/im-Nishant)
