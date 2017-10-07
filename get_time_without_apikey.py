@@ -58,6 +58,9 @@ def main():
         netTime = travel_time(frm,to,mode)
         print("\nIt will take %s to travel from %s to %s." %(netTime, frm, to))
         exit_point()
+    except KeyboardInterrupt:
+        print("A Keyboard Interrupt was issued by user.\nThank you for using this service.\n")
+        sys.exit()
     except:
         print("Error: Invalid keystroke")
         exit_point()
