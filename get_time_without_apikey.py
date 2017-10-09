@@ -38,7 +38,7 @@ def travel_time(frm,to,mode):
         sys.exit(1)
     except:
         print("Check your network connection")
-        exit()
+        sys.exit(1)
 
 
 def main():
