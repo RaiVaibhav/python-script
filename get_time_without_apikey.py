@@ -14,7 +14,7 @@ def exit_point():
     e = input("Exit(y/n): ")
     if e=='Y' or e=='y':
         print("\nThanks for using this service. HAPPY TRAVELLING.\n")
-        sys.exit()
+        sys.exit(1)
     elif e=='n' or e=='N':
         main()
     else:
@@ -34,9 +34,11 @@ def travel_time(frm,to,mode):
             print('==== Failure To Retrieve ====')
             exit_point()
         return js["routes"][0]["legs"][0]["duration"]["text"]
+    except SystemExit:
+        sys.exit(1)
     except:
         print("Check your network connection")
-        
+        sys.exit(1)
 
 
 def main():
@@ -60,7 +62,9 @@ def main():
         exit_point()
     except KeyboardInterrupt:
         print("A Keyboard Interrupt was issued by user.\nThank you for using this service.\n")
-        sys.exit()
+        sys.exit(1)
+    except SystemExit:
+        sys.exit(1)
     except:
         print("Error: Invalid keystroke")
         exit_point()
