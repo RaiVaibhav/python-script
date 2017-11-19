@@ -1,0 +1,5 @@
+[cli]
+bears = SpaceConsistencyBear,PEP8Bear
+files = get_time_without_apikey.py,Get_travel_time_between_two_location.py
+flush_cache, use_spaces = True
+default_actions = *: ApplyPatchAction

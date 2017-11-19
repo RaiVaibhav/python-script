@@ -10,7 +10,6 @@ from googlemaps import Client
 # (API key) : Google maps API key
 GOOGLE_MAP_API_KEY = ''
 
-
 def get_direction(
             api_key,
             from_address,
